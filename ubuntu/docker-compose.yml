@@ -1,0 +1,17 @@
+---
+
+version: "2"
+
+services:
+    miniat:
+        hostname: miniat
+        image: subirjolly/miniat-ubuntu:latest
+        networks:
+            default:
+                aliases:
+                    - miniat
+        env_file: ./miniat_env
+        volumes:
+            - ../src:/root/miniat
+            - ./scripts:/root/scripts
+        command: /root/scripts/start.sh
