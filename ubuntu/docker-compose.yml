@@ -12,6 +12,6 @@ services:
                     - miniat
         env_file: ./miniat_env
         volumes:
-            - ../src:/root/miniat
+            - ../src/0x1-miniat/:/root/miniat
             - ./scripts:/root/scripts
         command: /root/scripts/start.sh
